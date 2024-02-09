@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    margin-bottom: 5%;
+    margin-top: -15%;
+    font-size: 30px;
+}
+
+/* styles for divs - main content*/
+#main {
+    background-color: aqua;
+    width: 40%;
+    border-radius: 10px;
+   /* padding: 6px; */
+}
+
+/* styles for playlist title */
+#playlist-logo {
+    width: 90px;
+    margin-right: 6px;
+}
+
+#playlist-title {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+#p1 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+#p2 {
+    font-size: 22px;
+}
