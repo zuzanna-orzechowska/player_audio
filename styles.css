@@ -24,14 +24,15 @@ h2 {
 /* styles for divs - main content*/
 #main {
     background-color: aqua;
-    width: 40%;
+    width: 50%;
     border-radius: 10px;
    /* padding: 6px; */
 }
 
 /* styles for playlist title */
 #playlist-logo {
-    width: 90px;
+    width: 70px;
+    min-width: 30px;
     margin-right: 6px;
 }
 
@@ -48,4 +49,51 @@ h2 {
 
 #p2 {
     font-size: 22px;
+}
+
+/* styles for left content */
+.left-content {
+    float: left;
+    padding: 16px;
+}
+
+.song-cover {
+    width: 180px;
+    margin-bottom: 6px;
+}
+
+/* style for progress line */
+
+.progress-off {
+    width: 180px;
+    height: 6px;
+    background-color: grey;
+    border-radius: 6px;
+}
+
+.progress-on {
+    width: 180px;
+    height: 6px;
+    background-color: red;
+    border-radius: 6px;
+}
+
+/* style for buttons */
+.buttons {
+    margin-top: 6px;
+}
+
+.prev-btn {
+    width: 30px;
+    background-color: aqua;
+    border: none;
+}
+
+.prev-btn:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+#prev {
+    width: 25px;
 }
