@@ -132,6 +132,6 @@ li:not(:last-of-type) {
     color: black;
 }
 
-.right-content a:hover {
+.song-change /*.right-content a:hover*/ {
     color: brown;
 }

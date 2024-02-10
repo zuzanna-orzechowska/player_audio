@@ -10,7 +10,7 @@
 </head>
 <body>   
     <!--Used songs-->
-    <audio>
+    <audio id="play-audio">
         <source src="songs/Desperate.wav" type="audio/wav">
         <source src="songs/NewYearNewMe.wav" type="audio/wav">
         <source src="songs/Purpose.wav" type="audio/wav">
@@ -35,7 +35,7 @@
         <div class="left-content">
             <img src="images/song1.png" alt="Song1 Cover" class="song-cover">
 
-            <div id="progress-line" class="progress-off">
+            <div id="progress-line" class="progress-off"> <!--TUTAJ NIE HALO COS-->
               <!--  <div id="progress-bottom" class="progress-bottom-line"></div> 
               <div id="progress-top" class="progress-top-line"></div> --> 
             </div>
@@ -48,12 +48,12 @@
                         </button>
                     </div>
                     <div id="play-button">
-                        <button type="button" class="play-btn" id="play">
+                        <button type="button" class="play-btn" id="play" onclick="changePlayAndPause()">
                             <img src="images/play.png" alt="play button" id="bigger-play-btn">
                         </button>
                     </div>
                     <div id="next-button">
-                        <button type="button" class="next-btn" id="next">
+                        <button type="button" class="next-btn" id="next" onclick="playNextSong()">
                             <img src="images/next.png" alt="next button">
                         </button>
                     </div>
