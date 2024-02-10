@@ -17,7 +17,6 @@ body {
 
 h2 {
     margin-bottom: 5%;
-    margin-top: -15%;
     font-size: 30px;
 }
 
@@ -33,7 +32,7 @@ h2 {
 #playlist-logo {
     width: 70px;
     min-width: 30px;
-    margin-right: 6px;
+    margin-right: 16px;
 }
 
 #playlist-title {
@@ -58,21 +57,21 @@ h2 {
 }
 
 .song-cover {
-    width: 180px;
+    width: 220px;
     margin-bottom: 6px;
 }
 
 /* style for progress line */
 
 .progress-off {
-    width: 180px;
+    width: 220px;
     height: 6px;
     background-color: grey;
     border-radius: 6px;
 }
 
 .progress-on {
-    width: 180px;
+    width: 220px;
     height: 6px;
     background-color: red;
     border-radius: 6px;
@@ -81,19 +80,58 @@ h2 {
 /* style for buttons */
 .buttons {
     margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.prev-btn {
+.center-btns {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.buttons img:not(#bigger-play-btn) {
+    width: 20px;
+}
+
+#bigger-play-btn {
+    width: 30px;
+}
+
+.prev-btn, .play-btn, .next-btn, .speaker-btn {
     width: 30px;
     background-color: aqua;
     border: none;
 }
 
-.prev-btn:hover {
+.prev-btn:hover, .play-btn:hover, .next-btn:hover, .speaker-btn:hover {
     cursor: pointer;
     background-color: blueviolet;
 }
 
-#prev {
-    width: 25px;
+/* styles for right content */
+.right-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    margin-top: 26px;
+}
+
+ul {
+    list-style: none;
+    font-size: 18px;
+}
+
+li:not(:last-of-type) {
+    margin-bottom: 9px;
+}
+
+.right-content a {
+    text-decoration: none;
+    color: black;
+}
+
+.right-content a:hover {
+    color: brown;
 }

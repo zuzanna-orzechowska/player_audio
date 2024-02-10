@@ -11,12 +11,12 @@
 <body>   
     <!--Used songs-->
     <audio>
-        <source src="songs/Desperate.wav" type="audio/wav" id="song1">
-        <source src="songs/NewYearNewMe.wav" type="audio/wav" id="song2">
-        <source src="songs/Purpose.wav" type="audio/wav" id="song3">
-        <source src="songs/TakeOff.wav" type="audio/wav" id="song4">
-        <source src="songs/Grateful.mp3" type="audio/mpeg" id="song5">
-        <source src="songs/OneShot.mp3" type="audio/mpeg" id="song6">
+        <source src="songs/Desperate.wav" type="audio/wav">
+        <source src="songs/NewYearNewMe.wav" type="audio/wav">
+        <source src="songs/Purpose.wav" type="audio/wav">
+        <source src="songs/TakeOff.wav" type="audio/wav">
+        <source src="songs/Grateful.mp3" type="audio/mpeg">
+        <source src="songs/OneShot.mp3" type="audio/mpeg">
     </audio>
     
     <h2>MoMusic! 🎵</h2>
@@ -31,6 +31,7 @@
         </div>
         <hr>
 
+        <!--Left content - song cover and controls-->
         <div class="left-content">
             <img src="images/song1.png" alt="Song1 Cover" class="song-cover">
 
@@ -40,18 +41,53 @@
             </div>
 
             <div class="buttons">
-                <div id="previous-button">
-                    <button type="button" class="prev-btn">
-                        <img src="images/previous.png" alt="previous button" id="prev">
+                <div class="center-btns">
+                    <div id="previous-button">
+                        <button type="button" class="prev-btn" id="prev">
+                            <img src="images/previous.png" alt="previous button">
+                        </button>
+                    </div>
+                    <div id="play-button">
+                        <button type="button" class="play-btn" id="play">
+                            <img src="images/play.png" alt="play button" id="bigger-play-btn">
+                        </button>
+                    </div>
+                    <div id="next-button">
+                        <button type="button" class="next-btn" id="next">
+                            <img src="images/next.png" alt="next button">
+                        </button>
+                    </div>
+                </div>
+                <div id="speaker-button">
+                    <button type="button" class="speaker-btn" id="speaker">
+                        <img src="images/unmute.png" alt="speaker button">
                     </button>
                 </div>
-                <div id="play-button">
-                    
-                </div>
-                <div id="next-button"></div>
-                <div id="speaker-button"></div>
             </div>
+        </div>
 
+        <!--Right content - song titles, song time-->
+        <div class="right-content">
+            <div class="right-content-titles">
+                <ul>
+                    <li><a id="song1" href="#">NEFFEX - Desperate</a></li>
+                    <li><a id="song2" href="#">NEFFEX - New Year, New Me</a></li>
+                    <li><a id="song3" href="#">NEFFEX - Purpose</a></li>
+                    <li><a id="song4" href="#">NEFFEX - Take off</a></li>
+                    <li><a id="song5" href="#">NEFFEX - Grateful</a></li>
+                    <li><a id="song6" href="#">NEFFEX - One Shot</a></li>
+                </ul>
+            </div>
+            <div class="right-content-times">
+                <ul>
+                    <li id="time1">3:15</li>
+                    <li id="time2">2:20</li>
+                    <li id="time3">3:46</li>
+                    <li id="time4">2:17</li>
+                    <li id="time5">3:02</li>
+                    <li id="time6">2:55</li>
+                </ul>
+            </div>
         </div>
 
     </div>
