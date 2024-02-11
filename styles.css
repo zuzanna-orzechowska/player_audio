@@ -127,11 +127,12 @@ li:not(:last-of-type) {
     margin-bottom: 9px;
 }
 
-.right-content a {
+.song-title {
     text-decoration: none;
     color: black;
 }
 
-.song-change /*.right-content a:hover*/ {
+.song-change, .right-content a:hover {
+    text-decoration: none;
     color: brown;
 }

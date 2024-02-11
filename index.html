@@ -33,7 +33,7 @@
 
         <!--Left content - song cover and controls-->
         <div class="left-content">
-            <img src="images/song1.png" alt="Song1 Cover" class="song-cover">
+            <img src="images/song1.png" alt="Song1 Cover" class="song-cover" id="current-song-cover">
 
             <div id="progress-line" class="progress-off"> <!--TUTAJ NIE HALO COS-->
               <!--  <div id="progress-bottom" class="progress-bottom-line"></div> 
@@ -43,7 +43,7 @@
             <div class="buttons">
                 <div class="center-btns">
                     <div id="previous-button">
-                        <button type="button" class="prev-btn" id="prev">
+                        <button type="button" class="prev-btn" id="prev" onclick="playPrevSong()">
                             <img src="images/previous.png" alt="previous button">
                         </button>
                     </div>
@@ -70,12 +70,12 @@
         <div class="right-content">
             <div class="right-content-titles">
                 <ul>
-                    <li><a id="song1" href="#">NEFFEX - Desperate</a></li>
-                    <li><a id="song2" href="#">NEFFEX - New Year, New Me</a></li>
-                    <li><a id="song3" href="#">NEFFEX - Purpose</a></li>
-                    <li><a id="song4" href="#">NEFFEX - Take off</a></li>
-                    <li><a id="song5" href="#">NEFFEX - Grateful</a></li>
-                    <li><a id="song6" href="#">NEFFEX - One Shot</a></li>
+                    <li><a id="song1" class="song-title" href="#">NEFFEX - Desperate</a></li>
+                    <li><a id="song2" class="song-title" href="#">NEFFEX - New Year, New Me</a></li>
+                    <li><a id="song3" class="song-title" href="#">NEFFEX - Purpose</a></li>
+                    <li><a id="song4" class="song-title" href="#">NEFFEX - Take off</a></li>
+                    <li><a id="song5" class="song-title" href="#">NEFFEX - Grateful</a></li>
+                    <li><a id="song6" class="song-title" href="#">NEFFEX - One Shot</a></li>
                 </ul>
             </div>
             <div class="right-content-times">
