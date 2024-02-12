@@ -12,7 +12,7 @@ let songTable = ["songs/Desperate.wav", "songs/NewYearNewMe.wav", "songs/Purpose
 let progressTime = 0; // progress line will "flow" proportionally to song time */
 let playAudio = document.getElementById("play-audio");
 let songCover = document.getElementById("current-song-cover");
-
+let speaker = document.getElementById("mute-unmute");
 
 // changing play and pause buttons
 let changePlay = document.getElementById("bigger-play-btn");
@@ -119,7 +119,7 @@ function sixthSong () {
     changePlayAndPause ();
 }
 
-/* playing next song by using "next" button */
+/* playing next song by using "next" button TUTAJ NAPRAWIC   */
 function playNextSong () {
     ++ind;
     switch (ind) {
@@ -177,4 +177,15 @@ function playPrevSong () {
             }
     }
     
+}
+
+/* changing speaker button to mute/unmute */
+function changeSpeaker () {
+    if (speaker.src.includes("unmute")) {
+        speaker.src = "images/mute.png";
+        playAudio.muted = true;
+    } else {
+        speaker.src = "images/unmute.png";
+        playAudio.muted = false;
+    }
 }
