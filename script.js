@@ -8,11 +8,13 @@ let song6 = document.getElementById("song6");
 
 let songs = [song1, song2, song3, song4, song5, song6];
 let songTable = ["songs/Desperate.wav", "songs/NewYearNewMe.wav", "songs/Purpose.wav", "songs/TakeOff.wav", "songs/Grateful.mp3", "songs/OneShot.mp3"]
-/* let progressLine = document.getElementById("progress-line"); NAPRAWIC!!!!!!!!
-let progressTime = 0; // progress line will "flow" proportionally to song time */
+
 let playAudio = document.getElementById("play-audio");
 let songCover = document.getElementById("current-song-cover");
 let speaker = document.getElementById("mute-unmute");
+
+//let progressLine = document.getElementById("progress-line");
+//let progressTime = 0; // progress line will "flow" proportionally to song time 
 
 // changing play and pause buttons
 let changePlay = document.getElementById("bigger-play-btn");
@@ -22,19 +24,17 @@ function changePlayAndPause () {
     if (changePlay.src.includes("play")) {
         changePlay.src = "images/pause.png";
         playSong();
-        // songProgressLine();
     } else {
         changePlay.src = "images/play.png";
         pauseSong();
-        // songProgressLine();
     }
     
 }
 
 // playing/pausing songs using play/pause button
 function playSong () {
+    
     playAudio.play();
-
     for(let i=0; i<=5; i++) { // played song has different text color
         if(ind==i) { // ZMIENIA SIE COVER OD RAZU ALE TO DOPIERO JAK KLIKNE PRZYCISK PAUZA/PLAY 
             songs[i].classList.remove("song-title"); 
@@ -43,34 +43,49 @@ function playSong () {
             songs[i].classList.remove("song-change");
             songs[i].classList.add("song-title");
         };
-    }
+    } 
+   // songProgressLine();
 }
 
 function pauseSong () {
     playAudio.pause();
+   // clearInterval(progressInterval);
 }
 
-// progress line TUTAJJJJJJJJJJJJJJ filmik - Implementacja funkcji odtwarzania i pauzowania utworów / od 15:00
-/* function songProgressLine () {
-    progressLine.offsetWidth = 0; // start of the progress when song starts
-    let id = setInterval(progress,5); // 2nd arg is pace of video playback - flow
+// progress line????????????????????????????????????
+/*function songProgressLine () {
+    progressLine.classList.add("progress-line-on");
+    let progressInterval = setInterval(progress, 100); // Update progress every 100ms
     
     function progress() {
         if(playAudio.readyState) { // if song starts playing
-            progressTime = (playAudio.currentTime*220)/playAudio.duration;
-            progressLine.style.width = progressTime;
+            let progressWidth = (playAudio.currentTime / playAudio.duration) * 220;
+            progressLine.style.width = progressWidth + "px"; 
         }
     }
-} */ 
+} */
+ /*function songProgressLine () {
+    progressLine.classList.add("progress-line-on");
+   // progressLine.style.width= "0px"; // start of the progress when song starts
+    let id = setInterval(progress,100); // 2nd arg is pace of video playback - flow
+    
+    function progress() {
+        if(playAudio.readyState) { // if song starts playing
+            let progressWidth = (playAudio.currentTime / playAudio.duration) * 220;
+            // progressTime = (playAudio.currentTime*220)/playAudio.duration;
+            progressLine.style.width = progressWidth + "px"; 
+        }
+    }
+} */
 
 /* songs and it's covers changing */
 function firstSong () {
     ind = 0;
     playAudio.src = songTable[0];
 
+    changePlayAndPause ();
     songCover.src = "images/song1.png";
 
-    changePlayAndPause ();
     // tutaj to z progress line
 }
 
@@ -78,45 +93,45 @@ function secondSong () {
     ind = 1;
     playAudio.src = songTable[1];
 
+    changePlayAndPause ();
     songCover.src = "images/song2.png";
 
-    changePlayAndPause ();
 }
 
 function thirdSong () {
     ind = 2;
     playAudio.src = songTable[2];
 
+    changePlayAndPause ();
     songCover.src = "images/song3.png";
 
-    changePlayAndPause ();
 }
 
 function fourthSong () {
     ind = 3;
     playAudio.src = songTable[3];
 
+    changePlayAndPause ();
     songCover.src = "images/song4.png";
 
-    changePlayAndPause ();
 }
 
 function fifthSong () {
     ind = 4;
     playAudio.src = songTable[4];
 
+    changePlayAndPause ();
     songCover.src = "images/song5.png";
 
-    changePlayAndPause ();
 }
 
 function sixthSong () {
     ind = 5;
     playAudio.src = songTable[5];
 
+    changePlayAndPause ();
     songCover.src = "images/song6.png";
 
-    changePlayAndPause ();
 }
 
 /* playing next song by using "next" button TUTAJ NAPRAWIC   */

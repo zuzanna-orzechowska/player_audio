@@ -13,26 +13,35 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(circle, rgba(133,133,138,1) 12%, rgba(103,103,109,1) 100%); 
-    /* backgraound ciemniejszy, napisy białe i ten czerwony*/
+    background: radial-gradient(circle, rgba(117,117,117,1) 50%, rgba(33,33,33,1) 100%); 
 }
 
 h2 {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     font-size: 30px;
+    color: white;
+    text-shadow: 4px -5px 18px rgba(66, 66, 66, 1);
 }
 
 /* styles for divs - main content*/
 #main {
-    background-color: aqua;
+    background-color: #A62A2A;
     width: 50%;
     border-radius: 10px;
-   /* padding: 6px; */
+    box-shadow: 0px 9px 30px 3px rgba(66, 66, 66, 1);
+    margin-bottom: 3%;
+}
+
+hr {
+    border: solid 2px white;
+    border-radius: 6px;
+    width: 95%;
+    margin: 0 auto;
 }
 
 /* styles for playlist title */
 #playlist-logo {
-    width: 70px;
+    width: 80px;
     min-width: 30px;
     margin-right: 16px;
 }
@@ -50,6 +59,7 @@ h2 {
 
 #p2 {
     font-size: 22px;
+    font-weight: bold;
 }
 
 /* styles for left content */
@@ -66,13 +76,14 @@ h2 {
 /* style for progress line */
 
 .progress-off {
+
     width: 220px;
     height: 6px;
-    background-color: grey;
+    background-color: black;
     border-radius: 6px;
 }
 
-.progress-on {
+.progress-line-on {
     width: 220px;
     height: 6px;
     background-color: red;
@@ -101,15 +112,18 @@ h2 {
     width: 30px;
 }
 
+#bigger-play-btn:hover {
+    transform: scale(1.1);
+}
+
 .prev-btn, .play-btn, .next-btn, .speaker-btn {
     width: 30px;
-    background-color: aqua;
+    background-color: #A62A2A;
     border: none;
 }
 
 .prev-btn:hover, .play-btn:hover, .next-btn:hover, .speaker-btn:hover {
     cursor: pointer;
-    background-color: blueviolet;
 }
 
 /* styles for right content */
@@ -122,7 +136,7 @@ h2 {
 
 ul {
     list-style: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 li:not(:last-of-type) {
@@ -132,9 +146,15 @@ li:not(:last-of-type) {
 .song-title {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 .song-change, .right-content a:hover {
     text-decoration: none;
-    color: brown;
+    color: white;
+}
+
+/* styling for footer */
+#p3 {
+    font-size: 13px;
 }
