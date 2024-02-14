@@ -75,19 +75,10 @@ hr {
 
 /* style for progress line */
 
-.progress-off {
-
+input[type="range"] {
     width: 220px;
     height: 6px;
-    background-color: black;
-    border-radius: 6px;
-}
-
-.progress-line-on {
-    width: 220px;
-    height: 6px;
-    background-color: red;
-    border-radius: 6px;
+    accent-color: black;
 }
 
 /* style for buttons */
@@ -149,9 +140,15 @@ li:not(:last-of-type) {
     font-weight: bold;
 }
 
-.song-change, .right-content a:hover {
+.song-change {
     text-decoration: none;
-    color: white;
+    color: white; 
+    font-weight: bold;
+}
+
+.right-content a:hover {
+    cursor: context-menu;
+
 }
 
 /* styling for footer */

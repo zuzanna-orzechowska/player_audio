@@ -13,8 +13,7 @@ let playAudio = document.getElementById("play-audio");
 let songCover = document.getElementById("current-song-cover");
 let speaker = document.getElementById("mute-unmute");
 
-//let progressLine = document.getElementById("progress-line");
-//let progressTime = 0; // progress line will "flow" proportionally to song time 
+let progressLine = document.getElementById("progress-line");
 
 // changing play and pause buttons
 let changePlay = document.getElementById("bigger-play-btn");
@@ -34,9 +33,8 @@ function changePlayAndPause () {
 // playing/pausing songs using play/pause button
 function playSong () {
     
-    playAudio.play();
     for(let i=0; i<=5; i++) { // played song has different text color
-        if(ind==i) { // ZMIENIA SIE COVER OD RAZU ALE TO DOPIERO JAK KLIKNE PRZYCISK PAUZA/PLAY 
+        if(ind==i) {
             songs[i].classList.remove("song-title"); 
             songs[i].classList.add("song-change");
         } else {
@@ -44,39 +42,27 @@ function playSong () {
             songs[i].classList.add("song-title");
         };
     } 
-   // songProgressLine();
+    playAudio.play();
 }
 
 function pauseSong () {
     playAudio.pause();
-   // clearInterval(progressInterval);
 }
 
-// progress line????????????????????????????????????
-/*function songProgressLine () {
-    progressLine.classList.add("progress-line-on");
-    let progressInterval = setInterval(progress, 100); // Update progress every 100ms
-    
-    function progress() {
-        if(playAudio.readyState) { // if song starts playing
-            let progressWidth = (playAudio.currentTime / playAudio.duration) * 220;
-            progressLine.style.width = progressWidth + "px"; 
-        }
-    }
-} */
- /*function songProgressLine () {
-    progressLine.classList.add("progress-line-on");
-   // progressLine.style.width= "0px"; // start of the progress when song starts
-    let id = setInterval(progress,100); // 2nd arg is pace of video playback - flow
-    
-    function progress() {
-        if(playAudio.readyState) { // if song starts playing
-            let progressWidth = (playAudio.currentTime / playAudio.duration) * 220;
-            // progressTime = (playAudio.currentTime*220)/playAudio.duration;
-            progressLine.style.width = progressWidth + "px"; 
-        }
-    }
-} */
+// progress line
+function songProgressLine() {
+    let progress = (playAudio.currentTime / playAudio.duration) * progressLine.max;
+    progressLine.value = progress;
+}
+playAudio.addEventListener("timeupdate", songProgressLine); // when song is playing ("timeupdate"), the 
+                                        // "songProgressLine" is called automatically
+
+function songProgressChange () { // if thumb of "input type range" is changed, so is song's moment
+    let progressChange = (progressLine.value / progressLine.max) * playAudio.duration;
+    playAudio.currentTime = progressChange;
+}
+progressLine.addEventListener("input", songProgressChange); // if value of input is changed,
+                                                // "songProgressChange" is called automatically
 
 /* songs and it's covers changing */
 function firstSong () {
@@ -85,8 +71,6 @@ function firstSong () {
 
     changePlayAndPause ();
     songCover.src = "images/song1.png";
-
-    // tutaj to z progress line
 }
 
 function secondSong () {
