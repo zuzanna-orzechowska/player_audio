@@ -46,6 +46,7 @@ function playSong () {
 }
 
 function pauseSong () {
+    console.log('playAudio', playAudio);
     playAudio.pause();
 }
 
@@ -118,7 +119,7 @@ function sixthSong () {
 
 }
 
-/* playing next song by using "next" button TUTAJ NAPRAWIC   */
+/* playing next song by using "next" button */
 function playNextSong () {
     ++ind;
     switch (ind) {
